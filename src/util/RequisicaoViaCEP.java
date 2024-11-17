@@ -36,9 +36,7 @@ public class RequisicaoViaCEP{
         novaPesquisa.metodoHttp(url);
 
         cepObtido = gson.fromJson(novaPesquisa.getJsonCepObtido(), CEP.class);
-        System.out.println(cepObtido.toString());
         listaDeCEP.add(cepObtido);
-        System.out.println(listaDeCEP);
 
     }
 

@@ -9,12 +9,6 @@ public class CEP {
 
     @Override
     public String toString() {
-        return "CEP{" +
-                "cep='" + cep + '\'' +
-                ", logradouro='" + logradouro + '\'' +
-                ", complemento='" + complemento + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", localidade='" + localidade + '\'' +
-                '}';
+        return "CEP {Logradouro: " + logradouro + "; Bairro: " + bairro + "; Localidade: " + localidade + "}";
     }
 }

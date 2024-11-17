@@ -9,14 +9,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-
         RequisicaoViaCEP requisicao = new RequisicaoViaCEP();
+        Scanner entradaUsuario = new Scanner(System.in);
 
-        while (requisicao.getCep() != "sair") {
+        System.out.println("Buscador de endereços pelo CEP");
+        System.out.println("Digite 1 para buscar um endereço ou 2 para sair");
+        while (entradaUsuario.nextInt() != 2) {
             System.out.println("Digite seu CEP abaixo:");
             requisicao.getCampoDeBusca();
+            System.out.println("Inserido à lista: " + requisicao.getListaDeCEP().getLast());
+            System.out.println("Digite 1 para buscar um novo endereço ou 2 para sair");
         }
 
-        requisicao.getListaDeCEP();
+        //while (requisicao.getCep() != "sair") {
+        //    System.out.println("Digite seu CEP abaixo:");
+        //    requisicao.getCampoDeBusca();
+        // }
+
+        System.out.println("Lista de Endereços Capturados:");
+        System.out.println(requisicao.getListaDeCEP());
+
     }
+
+
 }
