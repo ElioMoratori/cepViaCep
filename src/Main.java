@@ -1,5 +1,5 @@
+import util.GeradorDeJson;
 import util.RequisicaoViaCEP;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         RequisicaoViaCEP requisicao = new RequisicaoViaCEP();
+        GeradorDeJson geraJson = new GeradorDeJson();
+
         Scanner entradaUsuario = new Scanner(System.in);
 
         System.out.println("Buscador de endereços pelo CEP");
@@ -26,10 +28,11 @@ public class Main {
         //    requisicao.getCampoDeBusca();
         // }
 
+        geraJson.registrar(requisicao.getListaDeCEP());
         System.out.println("Lista de Endereços Capturados:");
         System.out.println(requisicao.getListaDeCEP());
 
-    }
 
+    }
 
 }
